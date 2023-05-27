@@ -55,7 +55,7 @@ def coplist():
 @app.route('/cop/<copID>', methods=['GET', 'POST'])
 def cop(copID):
     cop = Cops.query.filter_by(copID=copID).first_or_404()
-    return render_template('cop.html', cop=cop, form=form, post=post)
+    return render_template('cop.html', cop=cop)
 
 if __name__ == "__main__":
     app.debug = True
