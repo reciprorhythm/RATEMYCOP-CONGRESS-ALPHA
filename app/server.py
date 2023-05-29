@@ -58,7 +58,7 @@ def cop(copID):
     return render_template('cop.html', cop=cop)
 
 if __name__ == "__main__":
-    app.debug = True
+    app.debug = False
     app.run(host="localhost", port=5000)
 
 
