@@ -4,17 +4,19 @@
 <div class="container" style="position: relative;">
 <table>
 <h0 style="text-align: left;">
-    <h1> {{ cop.firstN }} {{ cop.lastN }}</h1>
-    <h2 >{{ cop.rank }}, {{ cop.dept }} </h2>
-    <h3>$ {{ cop.sal }}</h3>
+    <h2> {{ cop.firstN }} {{ cop.lastN }}</h2>
+    <h4>$ {{ cop.sal }}</h4>
+    <h3>{{ cop.rank }}, {{ cop.dept }} </h3>
 </h0>
 </table>
 <style>
-    h4 {color: whitesmoke;font-size: large;}
+    table, h2, h3, h4 {border: 1px solid whitesmoke; border-radius: 5px; border-collapse: collapse;}
+    h3 {height: 100;}
+    table {border-spacing: 0.1px}
+    h5 {color: whitesmoke;font-size: large;}
     form {color: whitesmoke; text-align: justify;}
-    td {color: whitesmoke}
 </style>
-<h4>
+<h5>
     {% with messages = get_flashed_messages() %}
     {% if messages %}
     <ul>
@@ -24,6 +26,6 @@
     </ul>
     {% endif %}
     {% endwith %}
-</h4>
+</h5>
 </div>
 {% endblock %}
